@@ -11,10 +11,29 @@ Pipeline overview:
 3. **PDB generation** from sampled structures
 4. **MD trajectory** initialized from generated PDB.
 
+The fllowing diagram summarizes the training and sampling workflow. This is the most important part to realize the whole pipeline: connecting an AI-based model with biological data is never trivial. 
+One must decide:
+-**Which data** to use (here: torsional angles φ, ψ extracted from molecular dynamics trajectories of Alanine dipeptide)
+-**What to provide as input** (noisy torsions τ_t and timestep t)
+-**What to expect as output** (predicted score, eventually new torsional pairs leading to novel conformations)
+
+<p align="center">
+  <img src="docs/diagram.png" width="600">
+</p>
+
+### Extensions
+Although this demo focuses on torsional angles, the same design principal applies more broadly: 1) 3D Cartesian coordinates as input/output for full-atom modeling; 2) Contact maps or distance matrices for coarse-grained representations; 3) Residue-level features (sequence, secondary structure) to couple with structural learning ex.Alphafold).
+
+These choices define how well AI models can interact with physical reality, and illustrate the key challenge: translatinge biological complexity into learnable machine representations.
+
+
+Note: This project does not aim to replace classical MD. It serves as a prototype to study the trade-offs between AI-based generative surrogates and physics-based simulations on toy datasets.
+
 <p align="center">
   <img src="results/loss_curve.png" width="320">
   <img src="results/energy_before_after.png" width="320">
 </p>
+
 
 ## Quickstart
 
@@ -22,3 +41,4 @@ Pipeline overview:
 conda env create -f environment.yml
 conda activate diff-sma-md
 jupyter notebook demo.ipynb
+
