@@ -32,7 +32,7 @@ Although this demo focuses on torsional angles, the same design principal applie
 These choices define how well AI models can interact with physical reality, and illustrate the key challenge: translatinge biological complexity into learnable machine representations.
 
 
-Note: This project does not aim to replace classical MD. It serves as a prototype to study the trade-offs between AI-based generative surrogates and physics-based simulations on toy datasets.
+**Note.** This project does not aim to replace classical MD. It serves as a prototype to study the trade-offs between AI-based generative surrogates and physics-based simulations on toy datasets.
 
 <p align="center">
   <img src="results/loss_curve.png" width="320">
@@ -51,5 +51,6 @@ Note: This project does not aim to replace classical MD. It serves as a prototyp
 conda env create -f environment.yml
 conda activate diff-sma-md
 jupyter notebook demo.ipynb
+
 
 
