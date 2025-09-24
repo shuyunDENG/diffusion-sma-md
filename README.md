@@ -50,7 +50,8 @@ These choices define how well AI models can interact with physical reality, and 
 ```bash
 conda env create -f environment.yml
 conda activate diff-sma-md
-jupyter notebook demo.ipynb
+jupyter notebook colab/pipeline_sma_md.ipynb
+
 
 
 
