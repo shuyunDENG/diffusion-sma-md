@@ -59,9 +59,9 @@ To reproduce the experiments:
 3. Run preprocessing:
 ```bash
 python scripts/preprocess_data.py --input data/raw/ala2.xtc --output data/processed/
+```
 
-
-If you prefer to work with your own trajectories, make sure to:
+**Note.** If you prefer to work with your own trajectories, make sure to:
 	•	Convert them to .xtc and .pdb formats,
 	•	Define torsional angles (φ, ψ) extraction scripts under scripts/,
 	•	Update configs/ala2.yaml accordingly.
@@ -74,6 +74,7 @@ If you prefer to work with your own trajectories, make sure to:
 conda env create -f environment.yml
 conda activate diff-sma-md
 jupyter notebook colab/pipeline_sma_md.ipynb
+
 
 
 
