@@ -44,23 +44,11 @@ These choices define how well AI models can interact with physical reality, and 
 - Song et al., Score-Based Generative Modeling (2021).
 - *Generation of conformational ensembles of small molecules via surrogate model-assisted molecular dynamics*, [authors/year/journal—fill in].
 
-
-## Quickstart
-
-```bash
-conda env create -f environment.yml
-conda activate diff-sma-md
-jupyter notebook colab/pipeline_sma_md.ipynb
-
-
 ---
 
 ## Data Availability
 
 This project relies on publicly available molecular dynamics trajectories rather than shipping large binary files inside the repository.
-
-| Dataset | Description | Source |
-|----------|--------------|--------|
 | **Alanine Dipeptide (ALA2)** | Classical benchmark system for conformational sampling and validation of diffusion-based MD surrogates. | [MDShare – Alanine Dipeptide](https://markovmodel.github.io/mdshare/ALA2/#alanine-dipeptide) |
 | **SMA–Protein System (optional)** | Custom trajectory used for proof-of-concept fine-tuning. | (to be hosted on Zenodo/Drive) |
 
@@ -77,6 +65,17 @@ If you prefer to work with your own trajectories, make sure to:
 	•	Convert them to .xtc and .pdb formats,
 	•	Define torsional angles (φ, ψ) extraction scripts under scripts/,
 	•	Update configs/ala2.yaml accordingly.
+
+
+
+## Quickstart
+
+```bash
+conda env create -f environment.yml
+conda activate diff-sma-md
+jupyter notebook colab/pipeline_sma_md.ipynb
+
+
 
 
 
