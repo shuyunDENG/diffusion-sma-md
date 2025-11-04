@@ -54,5 +54,28 @@ jupyter notebook colab/pipeline_sma_md.ipynb
 
 
 
+## 📂 Data Availability
+
+This project relies on publicly available molecular dynamics trajectories rather than shipping large binary files inside the repository.
+
+| Dataset | Description | Source |
+|----------|--------------|--------|
+| **Alanine Dipeptide (ALA2)** | Classical benchmark system for conformational sampling and validation of diffusion-based MD surrogates. | [MDShare – Alanine Dipeptide](https://markovmodel.github.io/mdshare/ALA2/#alanine-dipeptide) |
+| **SMA–Protein System (optional)** | Custom trajectory used for proof-of-concept fine-tuning. | (to be hosted on Zenodo/Drive) |
+
+To reproduce the experiments:
+
+1. Download the ALA2 files (`ala2.xtc`, `ala2.pdb`) from the MDShare link above.
+2. Place them in: data/raw
+3. Run preprocessing:
+```bash
+python scripts/preprocess_data.py --input data/raw/ala2.xtc --output data/processed/
+
+
+If you prefer to work with your own trajectories, make sure to:
+	•	Convert them to .xtc and .pdb formats,
+	•	Define torsional angles (φ, ψ) extraction scripts under scripts/,
+	•	Update configs/ala2.yaml accordingly.
+
 
 
