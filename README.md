@@ -53,8 +53,9 @@ conda activate diff-sma-md
 jupyter notebook colab/pipeline_sma_md.ipynb
 
 
+---
 
-## 📂 Data Availability
+## Data Availability
 
 This project relies on publicly available molecular dynamics trajectories rather than shipping large binary files inside the repository.
 
@@ -76,6 +77,7 @@ If you prefer to work with your own trajectories, make sure to:
 	•	Convert them to .xtc and .pdb formats,
 	•	Define torsional angles (φ, ψ) extraction scripts under scripts/,
 	•	Update configs/ala2.yaml accordingly.
+
 
 
 
