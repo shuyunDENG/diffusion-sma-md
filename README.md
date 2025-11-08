@@ -35,8 +35,7 @@ These choices define how well AI models can interact with physical reality, and 
 **Note.** This project does not aim to replace classical MD. It serves as a prototype to study the trade-offs between AI-based generative surrogates and physics-based simulations on toy datasets.
 
 <p align="center">
-  <img src="results/loss_curve.png" width="320">
-  <img src="results/energy_before_after.png" width="320">
+  <img src="figs/ddpm_training_loss.png" width="400" alt="DDPM Training Loss">
 </p>
 
 ## References
@@ -68,11 +67,41 @@ python scripts/preprocess_data.py --input data/raw/ala2.xtc --output data/proces
 
 
 
+## Project Structure
+
+```
+diffusion-sma-md/
+├── colab/                    # Jupyter notebooks for experiments
+│   ├── pipeline_sma_md.ipynb
+│   └── Comparaison_Final.ipynb
+├── configs/                  # Configuration files (to be added)
+├── data/                     # Data directory
+│   ├── raw/                  # Raw MD trajectories (download from MDShare)
+│   └── processed/            # Processed features
+├── docs/                     # Documentation and diagrams
+│   ├── diagram.png
+│   └── Shuyun_DENG_Rapport.pdf
+├── figs/                     # Result figures and visualizations
+│   ├── Free_energy.png
+│   ├── Joint_tICA.png
+│   ├── RMSD.png
+│   └── ...
+├── results/                  # Experimental results (generated)
+├── scripts/                  # Preprocessing and utility scripts (to be added)
+├── torsion_Diffusion.py     # Core diffusion model implementation
+├── image.py                  # Plotting utilities
+├── environment.yml           # Conda environment specification
+└── README.md
+```
+
 ## Quickstart
 
 ```bash
+# Create and activate conda environment
 conda env create -f environment.yml
-conda activate diff-sma-md
+conda activate diffusion-sma-md
+
+# Launch Jupyter notebook
 jupyter notebook colab/pipeline_sma_md.ipynb
 
 
