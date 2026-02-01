@@ -1,0 +1,91 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Data files
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.hdf5
+*.h5
+
+# Molecular dynamics files
+*.xtc
+*.trr
+*.pdb
+*.gro
+*.tpr
+*.edr
+*.cpt
+*.mdp
+
+# Model checkpoints
+*.pth
+*.pt
+*.ckpt
+checkpoints/
+models/saved/
+
+# Logs
+logs/
+*.log
+wandb/
+
+# Temporary files
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Results and outputs (keep directory structure but ignore large files)
+results/*.npy
+results/*.npz
+results/*.png
+results/*.pdf
+results/trajectories/
+
+# Large data directories
+data/raw/
+data/processed/*.xtc
+data/processed/*.npy
+
+# Keep directory structure
+!.gitkeep
